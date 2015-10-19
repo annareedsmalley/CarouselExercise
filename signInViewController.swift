@@ -13,10 +13,19 @@ class signInViewController: UIViewController {
     var initialY: CGFloat!
     let offset: CGFloat = -50
     
-     let emptyFieldAlertController = UIAlertController(title: "Forget something?", message: "Please enter your email address and password", preferredStyle: .Alert)
+     let emptyFieldAlertController = UIAlertController(title: "Oops - forget something?", message: "Please enter your email address and password", preferredStyle: .Alert)
     
-    //let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+     let incorrectCredentialsAlertController = UIAlertController(title: "Oops - try again", message: "Incorrect email or password", preferredStyle: .Alert)
     
+    let OKAction = UIAlertAction(title: "OK", style: .Default) { (hide) in  // handle response here.}
+        
+        
+      
+    //optional code here
+    
+}
+    
+
     @IBOutlet weak var signInContent: UIView!
     
     @IBOutlet weak var signInScrollView: UIScrollView!
@@ -71,13 +80,38 @@ class signInViewController: UIViewController {
     
         if emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
             
-            presentViewController(emptyFieldAlertController, animated: true)
+            self.emptyFieldAlertController.addAction(self.OKAction)
+            presentViewController(emptyFieldAlertController, animated: true){
+                
+
+            
+            }
             
             
-        }}
+        }
+      
+        //var email = emailTextField.text
+        //var password = passwordTextField.text
         
-    // optional code for what happens after the alert controller has finished presenting
+        if (emailTextField.text != "a" || passwordTextField.text != "b") {
+            print ("incorrect something")
             
+            self.incorrectCredentialsAlertController.addAction(self.OKAction)
+            presentViewController(incorrectCredentialsAlertController, animated: true){
+                
+                
+                
+            }
+
+        }
+        
+        else {
+            
+        print ("both correct")
+        
+        performSegueWithIdentifier("loginSegue", sender: nil)
+        }
+        //&& passwordTextField.text = "password"
     }
     
     

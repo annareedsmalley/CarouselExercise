@@ -124,10 +124,11 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vRx-2h-rUI">
-                                                        <rect key="frame" x="20" y="23" width="277" height="49"/>
+                                                        <rect key="frame" x="21" y="23" width="277" height="49"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <connections>
                                                             <action selector="didPressSignIn:" destination="Bl6-lS-6KG" eventType="touchUpInside" id="16x-Vu-lE2"/>
+                                                            <segue destination="XlO-Hv-zj1" kind="modal" identifier="loginSegue" id="3wg-8b-Cq0"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -157,7 +158,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBk-jj-Ev5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544" y="611"/>
+            <point key="canvasLocation" x="1586" y="596"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="m31-8X-ZEW">
+            <objects>
+                <viewController id="XlO-Hv-zj1" customClass="tutorialViewController" customModule="CarouselExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TRI-nK-nta">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="CRg-sq-xci">
+                                <rect key="frame" x="0.0" y="-2" width="1280" height="570"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="welcome4" id="KWq-EU-4fR">
+                                        <rect key="frame" x="960" y="2" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="welcome3" id="Wf3-xl-Ddu">
+                                        <rect key="frame" x="640" y="2" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="welcome1" id="LCb-zN-UC0">
+                                        <rect key="frame" x="0.0" y="2" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="welcome2" id="QXR-tv-VIH">
+                                        <rect key="frame" x="320" y="2" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" numberOfPages="4" id="SRI-BJ-KXd">
+                                <rect key="frame" x="595" y="266" width="89" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1280" height="568"/>
+                    <connections>
+                        <outlet property="tutorialPageControl" destination="SRI-BJ-KXd" id="6wJ-tJ-Hza"/>
+                        <outlet property="tutorialScrollView" destination="CRg-sq-xci" id="F8C-R0-iph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6EU-MC-xcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="1339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="asI-6w-QQa">
@@ -190,5 +241,9 @@
         <image name="login_text" width="320" height="70"/>
         <image name="sign_in_buttons" width="320" height="104"/>
         <image name="sign_in_nav_bar" width="320" height="66"/>
+        <image name="welcome1" width="320" height="568"/>
+        <image name="welcome2" width="320" height="568"/>
+        <image name="welcome3" width="320" height="568"/>
+        <image name="welcome4" width="320" height="568"/>
     </resources>
 </document>
