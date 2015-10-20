@@ -21,7 +21,7 @@ class tutorialViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         tutorialScrollView.contentSize = CGSize(width:1280, height: 568)
+         tutorialScrollView.contentSize = CGSize(width:1280, height: 495)
         
         tutorialScrollView.delegate = self
         
