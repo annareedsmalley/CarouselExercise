@@ -131,7 +131,6 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <connections>
                                                             <action selector="didPressSignIn:" destination="Bl6-lS-6KG" eventType="touchUpInside" id="16x-Vu-lE2"/>
-                                                            <segue destination="XlO-Hv-zj1" kind="modal" identifier="loginSegue" id="3wg-8b-Cq0"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -158,11 +157,12 @@
                         <outlet property="signInButton" destination="vRx-2h-rUI" id="Tha-Ke-Dhk"/>
                         <outlet property="signInContent" destination="nS6-fc-bdk" id="Q0S-Y5-8g2"/>
                         <outlet property="signInScrollView" destination="f7S-u9-nsc" id="OjR-Mo-Y07"/>
+                        <segue destination="XlO-Hv-zj1" kind="modal" identifier="realLoginSegue" id="lfR-jN-XRj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBk-jj-Ev5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="596"/>
+            <point key="canvasLocation" x="618" y="1908"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="m31-8X-ZEW">
@@ -222,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EU-MC-xcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="1339"/>
+            <point key="canvasLocation" x="1600" y="1775"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="bTB-sw-s0E">
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jbr-SS-0nH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3464" y="877"/>
+            <point key="canvasLocation" x="3480" y="1685"/>
         </scene>
         <!--Conversations View Controller-->
         <scene sceneID="DTx-lH-utc">
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ic-k6-lgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2901" y="192.5"/>
+            <point key="canvasLocation" x="2109" y="128.5"/>
         </scene>
         <!--Settings3 View Controller-->
         <scene sceneID="UQG-Ey-eql">
@@ -503,7 +503,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VpS-zl-w2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2464" y="1333"/>
+            <point key="canvasLocation" x="2832" y="1701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="egJ-IL-Lc5">
